@@ -1,4 +1,4 @@
-package com.androiddevs.runningappyt.ui.fragments
+package com.madisadyk.running_tracker.ui.fragments
 
 import android.os.Bundle
 import android.view.View

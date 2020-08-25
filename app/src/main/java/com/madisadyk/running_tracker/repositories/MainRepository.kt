@@ -7,7 +7,6 @@ import javax.inject.Inject
 class MainRepository @Inject constructor(
     val runDao: RunDAO
 ) {
-
     suspend fun insertRun(run: Run) = runDao.insertRun(run)
 
     suspend fun deleteRun(run: Run) = runDao.deleteRun(run)
@@ -20,13 +19,13 @@ class MainRepository @Inject constructor(
 
     fun getAllRunsSortedByAvgSpeed() = runDao.getAllRunsSortedByAvgSpeed()
 
-    fun getAllRunsSortedByCaloriesBurned() = runDao.getAllRunsSortedByCaloriesburned()
+    fun getAllRunsSortedByCaloriesBurned() = runDao.getAllRunsSortedByCaloriesBurned()
 
-    fun getTotalTimeInMillis() = runDao.getTotalTimeInMillis()
-
-    fun getTotalCaloriesBurned() = runDao.getTotalCaloriesBurned()
+    fun getTotalAvgSpeed() = runDao.getTotalAvgSpeed()
 
     fun getTotalDistance() = runDao.getTotalDistance()
 
-    fun getTotalAvgSpeed() = runDao.getTotalAvgSpeed()
+    fun getTotalCaloriesBurned() = runDao.getTotalCaloriesBurned()
+
+    fun getTotalTimeInMillis() = runDao.getTotalTimeInMillis()
 }

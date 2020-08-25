@@ -2,6 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
     app:startDestination="@id/setupFragment">
+
     <fragment
         android:id="@+id/runFragment"
         android:name="com.madisadyk.running_tracker.ui.fragments.RunFragment"
@@ -12,7 +13,7 @@
     </fragment>
     <fragment
         android:id="@+id/setupFragment"
-        android:name="com.androiddevs.runningappyt.ui.fragments.SetupFragment"
+        android:name="com.madisadyk.running_tracker.ui.fragments.SetupFragment"
         android:label="SetupFragment" >
         <action
             android:id="@+id/action_setupFragment_to_runFragment"

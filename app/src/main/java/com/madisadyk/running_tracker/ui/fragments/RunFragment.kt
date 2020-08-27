@@ -31,15 +31,15 @@ class RunFragment : Fragment(R.layout.fragment_run), EasyPermissions.PermissionC
         }
     }
 
-    override fun onPermissionsGranted(requestCode: Int, perms: MutableList<String>) {
+    override fun onPermissionsGranted(requestCode: Int, perms: MutableList<String>) {}
+
+    override fun onPermissionsDenied(requestCode: Int, perms: MutableList<String>) {
         if (EasyPermissions.somePermissionPermanentlyDenied(this, perms)) {
             AppSettingsDialog.Builder(this).build().show()
         } else {
             requestPermissions()
         }
     }
-
-    override fun onPermissionsDenied(requestCode: Int, perms: MutableList<String>) {}
 
     override fun onRequestPermissionsResult(
         requestCode: Int,
